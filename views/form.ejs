@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts-css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+	
+    <script src="/scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <ul>
+              <li><a href="https://ataka66club.ru/contacts/">Контакты</a></li>
+              <li><a href="https://ataka66club.ru/">О нас</a></li>
+            </ul>
+          </div>
+          <div class="tel">
+            <a href="tel:88004000500">8 800 4000 500</a>
+          </div>
+
+    </header><br>
+    <main>
+        <h2>Форма регистрации на игру</h2>
+        <img id ="logo" src="pic\logo.jpg" alt="logo">
+        <a id="counter">Количество оставшихся мест</a>
+            <form id="form" action="/" method="POST">
+                <label for="name">Ваше ФИО</label><br>
+                    <input type="text" required id="fname" name="name" placeholder="Иванов Иван Иванович"><br>
+                <label for="mobile">Номер мобильного телефона</label><br>   
+                    <input type="text" requiredid="phone" name="mobile" placeholder="Введите ваш телефон"><br>
+                <label for="equipment"> Есть ли экипировка?</label><br>
+                    <select id="equipment" name="equipment">
+                        <option value="owner">С своей экипировкой</option>
+                        <option value="arenda">С стандартной прокатной экипировкой</option>
+                        <option value="arenda+">С продвинутой прокатной экипировкой</option>
+                </select><br>
+                <button type="submit" id="sending_button">На игру!</button>
+          </form>
+    </main> 
+    <footer> 
+    </footer>
+</body>
+</html>
