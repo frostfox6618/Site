@@ -13,13 +13,19 @@ app.use(express.static('public'));
 
 // рендеринг главной страницы
 app.get('/', (req, res) => {
-    res.render('form');
+    res.render('index');
   });
+
+app.get('/about', (req, res) => {
+    res.send('О нас');
+  });
+
+app.post('/', 
+    (req, res) => {
+      res.send("POST Request Called")
+})
 
 app.listen(port, () => {
   console.log(`Сервер запущен на http://localhost:${port}`);
 });
 
-app.get('/about', (req, res) => {
-    res.send('О нас');
-  });
