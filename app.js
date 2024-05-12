@@ -20,10 +20,13 @@ app.get('/about', (req, res) => {
     res.send('О нас');
   });
 
-app.post('/', 
-    (req, res) => {
-      res.send("POST Request Called")
-})
+  const urlencodedParser = express.urlencoded({extended: false});
+
+  app.post("/", urlencodedParser, function (request, response) {
+    if(!request.body) return response.sendStatus(400);
+    console.log(request.body);
+    response.send(`${request.body.name} - ${request.body.mobile}`);
+});
 
 app.listen(port, () => {
   console.log(`Сервер запущен на http://localhost:${port}`);
